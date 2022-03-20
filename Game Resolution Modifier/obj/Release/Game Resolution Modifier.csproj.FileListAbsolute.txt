@@ -1,0 +1,6 @@
+D:\C Sharp\Game Resolution Modifier\Game Resolution Modifier\bin\Release\Game_Resolution_Modifier.exe
+D:\C Sharp\Game Resolution Modifier\Game Resolution Modifier\bin\Release\Game_Resolution_Modifier.pdb
+D:\C Sharp\Game Resolution Modifier\Game Resolution Modifier\obj\Release\Game Resolution Modifier.csprojAssemblyReference.cache
+D:\C Sharp\Game Resolution Modifier\Game Resolution Modifier\obj\Release\Game Resolution Modifier.csproj.CoreCompileInputs.cache
+D:\C Sharp\Game Resolution Modifier\Game Resolution Modifier\obj\Release\Game_Resolution_Modifier.exe
+D:\C Sharp\Game Resolution Modifier\Game Resolution Modifier\obj\Release\Game_Resolution_Modifier.pdb
