@@ -7,6 +7,8 @@ namespace Game_Resolution_Modifier.Scripts
 {
     public class GenshinImpactController : RegeditControler
     {
+        private const string regKeyNameFullScreen = "Screenmanager Is Fullscreen mode_h3981298716";
+
         public GenshinImpactController()
         {
             regPath = "miHoYo\\原神";
@@ -25,13 +27,19 @@ namespace Game_Resolution_Modifier.Scripts
                     sr.ReadLine();
                     regValueHeight = sr.ReadLine();
                     sr.ReadLine();
-                    isFullScreen = sr.ReadLine();
+                    regValueIsFullScreen = sr.ReadLine() == "true" ? "1" : "0";
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine("读取配置文件错误：" + e + "，使用默认配置");
             }
+        }
+
+        protected override void WriteRegeditTemplate()
+        {
+            WriteRegedit(regKeyNameFullScreen, regValueIsFullScreen, Base.Hex);
+            base.WriteRegeditTemplate();
         }
     }
 }

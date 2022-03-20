@@ -12,10 +12,9 @@ namespace Game_Resolution_Modifier.Scripts.Base
         private const string regKeyNameHeight = "Screenmanager Resolution Height_h2627697771";
         private const string regKeyNameWeight = "Screenmanager Resolution Width_h182942802";
         
-        protected string regValueNameScreenSettingData = "{\"width\":1920,\"height\":810,\"isfullScreen\":false}.";
         protected string regValueWeight = "1920";
         protected string regValueHeight = "810";
-        protected string isFullScreen = "false";
+        protected string regValueIsFullScreen = "false";
 
         private readonly RegistryKey part = Registry.CurrentUser.OpenSubKey(Software, true);
 
@@ -79,7 +78,7 @@ namespace Game_Resolution_Modifier.Scripts.Base
 
                 Console.WriteLine("Weigth：" + regValueWeight);
                 Console.WriteLine("Height：" + regValueHeight);
-                Console.WriteLine("是否全屏：" + isFullScreen);
+                Console.WriteLine("是否全屏：" + regValueIsFullScreen);
                 
                 return true;
             }

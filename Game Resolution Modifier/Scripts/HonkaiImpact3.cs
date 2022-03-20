@@ -8,6 +8,7 @@ namespace Game_Resolution_Modifier.Scripts
     public class HonkaiImpact3Controller : RegeditControler
     {
         private const string regKeyNameScreenSettingData = "GENERAL_DATA_V2_ScreenSettingData_h1916288658";
+        private string regValueNameScreenSettingData = "{\"width\":1920,\"height\":810,\"isfullScreen\":false}.";
 
         public HonkaiImpact3Controller()
         {
@@ -27,8 +28,8 @@ namespace Game_Resolution_Modifier.Scripts
                     sr.ReadLine();
                     regValueHeight = sr.ReadLine();
                     sr.ReadLine();
-                    isFullScreen = sr.ReadLine();
-                    regValueNameScreenSettingData = "{\"width\":" + regValueWeight + ",\"height\":" + regValueHeight + ",\"isfullScreen\":" + isFullScreen + "}.";
+                    regValueIsFullScreen = sr.ReadLine();
+                    regValueNameScreenSettingData = "{\"width\":" + regValueWeight + ",\"height\":" + regValueHeight + ",\"isfullScreen\":" + regValueIsFullScreen + "}.";
                 }
             }
             catch (Exception e)
