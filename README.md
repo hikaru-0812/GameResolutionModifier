@@ -1,4 +1,4 @@
-#GameResolutionModifier
+# GameResolutionModifier
 自动修改PC端崩坏3、原神、战双帕弥什的屏幕分辨率
 
 使用步骤：
