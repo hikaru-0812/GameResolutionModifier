@@ -1,0 +1,8 @@
+D:\C Sharp\GameResolutionModifier\GameResolutionModifier\bin\Release\Game_Resolution_Modifier.exe.config
+D:\C Sharp\GameResolutionModifier\GameResolutionModifier\bin\Release\Game_Resolution_Modifier.exe
+D:\C Sharp\GameResolutionModifier\GameResolutionModifier\bin\Release\Game_Resolution_Modifier.pdb
+D:\C Sharp\GameResolutionModifier\GameResolutionModifier\obj\Release\GameResolutionModifier.csproj.AssemblyReference.cache
+D:\C Sharp\GameResolutionModifier\GameResolutionModifier\obj\Release\GameResolutionModifier.csproj.SuggestedBindingRedirects.cache
+D:\C Sharp\GameResolutionModifier\GameResolutionModifier\obj\Release\GameResolutionModifier.csproj.CoreCompileInputs.cache
+D:\C Sharp\GameResolutionModifier\GameResolutionModifier\obj\Release\Game_Resolution_Modifier.exe
+D:\C Sharp\GameResolutionModifier\GameResolutionModifier\obj\Release\Game_Resolution_Modifier.pdb
