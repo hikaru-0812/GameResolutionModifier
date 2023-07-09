@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game Resolution Modifier", "Game Resolution Modifier\Game Resolution Modifier.csproj", "{0F0CD3D0-CF51-4819-8870-5CC0BF9C7333}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameResolutionModifier", "GameResolutionModifier\GameResolutionModifier.csproj", "{0F0CD3D0-CF51-4819-8870-5CC0BF9C7333}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

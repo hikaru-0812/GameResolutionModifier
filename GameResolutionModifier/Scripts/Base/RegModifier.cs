@@ -3,20 +3,20 @@ using System.IO;
 using System.Text;
 using Microsoft.Win32;
 
-namespace Game_Resolution_Modifier.Scripts.Base
+namespace GameResolutionModifier.Scripts.Base
 {
-    public class RegeditControler
+    public abstract class RegModifier
     {
         private const string Software = "SOFTWARE";
-        protected string regPath;
-        private const string regKeyNameHeight = "Screenmanager Resolution Height_h2627697771";
-        private const string regKeyNameWeight = "Screenmanager Resolution Width_h182942802";
+        protected string RegPath;
+        private const string RegKeyNameHeight = "Screenmanager Resolution Height_h2627697771";
+        private const string RegKeyNameWeight = "Screenmanager Resolution Width_h182942802";
         
-        protected string regValueWeight = "1920";
-        protected string regValueHeight = "810";
-        protected string regValueIsFullScreen = "false";
+        protected string RegValueWeight = "1920";
+        protected string RegValueHeight = "810";
+        protected string RegValueIsFullScreen = "false";
 
-        private readonly RegistryKey part = Registry.CurrentUser.OpenSubKey(Software, true);
+        private readonly RegistryKey _part = Registry.CurrentUser.OpenSubKey(Software, true);
 
         /// <summary>
         /// 数据进制
@@ -48,13 +48,27 @@ namespace Game_Resolution_Modifier.Scripts.Base
             
             var fs = new FileStream(@".\屏幕分辨率配置.txt", FileMode.Create);
             var sw = new StreamWriter(fs);
+            var newLine = Environment.NewLine;
             //开始写入
-            sw.Write("//宽：//" + Environment.NewLine + "1920" + Environment.NewLine + "//高：//" + Environment.NewLine + "810" + Environment.NewLine + "//是否全屏：//" + Environment.NewLine + "false");
+            sw.Write("/*****************************************" + newLine);
+            sw.Write("参考分辨率：" + newLine);
+            sw.Write("16:9  1920X1080 2560X1440 3840X2160" + newLine);
+            sw.Write("21:9  1920X810 2560X1090 3840X1646" + newLine);
+            sw.Write("/*****************************************" + newLine);
+            sw.Write("//宽：//" + newLine + "1920" + newLine + "//高：//" + newLine + "810" + newLine + "//是否全屏：//" + newLine + "false");
             //清空缓冲区
             sw.Flush();
             //关闭流
             sw.Close();
             fs.Close();
+        }
+
+        protected void SkipFileHeader(StreamReader streamReader)
+        {
+            for (var i = 0; i < 5; i++)
+            {
+                streamReader.ReadLine();
+            }
         }
 
         /// <summary>
@@ -67,18 +81,18 @@ namespace Game_Resolution_Modifier.Scripts.Base
             
             try
             {
-                if (part is null)
+                if (_part is null)
                 {
                     return false;
                 }
 
-                WriteRegeditTemplate();
+                WriteRegeditWeightAndHeight();
 
-                part.Close();
+                _part.Close();
 
-                Console.WriteLine("Weigth：" + regValueWeight);
-                Console.WriteLine("Height：" + regValueHeight);
-                Console.WriteLine("是否全屏：" + regValueIsFullScreen);
+                Console.WriteLine("Weight：" + RegValueWeight);
+                Console.WriteLine("Height：" + RegValueHeight);
+                Console.WriteLine("是否全屏：" + RegValueIsFullScreen);
                 
                 return true;
             }
@@ -90,10 +104,10 @@ namespace Game_Resolution_Modifier.Scripts.Base
             return false;
         }
 
-        protected virtual void WriteRegeditTemplate()
+        protected virtual void WriteRegeditWeightAndHeight()
         {
-            WriteRegedit(regKeyNameWeight, regValueWeight, Base.Hex);
-            WriteRegedit(regKeyNameHeight, regValueHeight, Base.Hex);
+            WriteRegedit(RegKeyNameWeight, RegValueWeight, Base.Hex);
+            WriteRegedit(RegKeyNameHeight, RegValueHeight, Base.Hex);
         }
 
         /// <summary>
@@ -109,17 +123,17 @@ namespace Game_Resolution_Modifier.Scripts.Base
             switch (baseOfData)
             {
                 case Base.Bin:
-                    subKey = part.CreateSubKey(regPath, RegistryKeyPermissionCheck.ReadWriteSubTree);
+                    subKey = _part.CreateSubKey(RegPath, RegistryKeyPermissionCheck.ReadWriteSubTree);
                     subKey?.SetValue(key, StringToBinary(value), RegistryValueKind.Binary);
                     break;
                 case Base.Dec:
                     break;
                 case Base.Hex:
-                    subKey = part.CreateSubKey(regPath, RegistryKeyPermissionCheck.ReadWriteSubTree);
+                    subKey = _part.CreateSubKey(RegPath, RegistryKeyPermissionCheck.ReadWriteSubTree);
                     subKey?.SetValue(key, value, RegistryValueKind.DWord);
                     break;
                 default: //写入字符串
-                    subKey = part.CreateSubKey(regPath);
+                    subKey = _part.CreateSubKey(RegPath);
                     subKey?.SetValue(key, value, RegistryValueKind.String);
                     break;
             }

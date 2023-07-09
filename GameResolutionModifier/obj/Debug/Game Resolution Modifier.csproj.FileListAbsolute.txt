@@ -1,0 +1,14 @@
+D:\C Sharp\Game Resolution Modifier\Game Resolution Modifier\bin\Debug\Game_Resolution_Modifier.exe
+D:\C Sharp\Game Resolution Modifier\Game Resolution Modifier\bin\Debug\Game_Resolution_Modifier.pdb
+D:\C Sharp\Game Resolution Modifier\Game Resolution Modifier\obj\Debug\Game Resolution Modifier.csprojAssemblyReference.cache
+D:\C Sharp\Game Resolution Modifier\Game Resolution Modifier\obj\Debug\Game Resolution Modifier.csproj.CoreCompileInputs.cache
+D:\C Sharp\Game Resolution Modifier\Game Resolution Modifier\obj\Debug\Game_Resolution_Modifier.exe
+D:\C Sharp\Game Resolution Modifier\Game Resolution Modifier\obj\Debug\Game_Resolution_Modifier.pdb
+D:\C Sharp\MHY-Game-Resolution-Modifier-master\Game Resolution Modifier\bin\Debug\Game_Resolution_Modifier.exe.config
+D:\C Sharp\MHY-Game-Resolution-Modifier-master\Game Resolution Modifier\bin\Debug\Game_Resolution_Modifier.exe
+D:\C Sharp\MHY-Game-Resolution-Modifier-master\Game Resolution Modifier\bin\Debug\Game_Resolution_Modifier.pdb
+D:\C Sharp\MHY-Game-Resolution-Modifier-master\Game Resolution Modifier\obj\Debug\Game Resolution Modifier.csproj.AssemblyReference.cache
+D:\C Sharp\MHY-Game-Resolution-Modifier-master\Game Resolution Modifier\obj\Debug\Game Resolution Modifier.csproj.SuggestedBindingRedirects.cache
+D:\C Sharp\MHY-Game-Resolution-Modifier-master\Game Resolution Modifier\obj\Debug\Game Resolution Modifier.csproj.CoreCompileInputs.cache
+D:\C Sharp\MHY-Game-Resolution-Modifier-master\Game Resolution Modifier\obj\Debug\Game_Resolution_Modifier.exe
+D:\C Sharp\MHY-Game-Resolution-Modifier-master\Game Resolution Modifier\obj\Debug\Game_Resolution_Modifier.pdb
