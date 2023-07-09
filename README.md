@@ -1,4 +1,4 @@
-# MHY-Game-Resolution-Modifier
+# GameResolutionModifier
 自动修改PC端崩坏3、原神、战双帕弥什的游戏分辨率
 
 使用步骤：
